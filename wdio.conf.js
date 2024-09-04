@@ -9,7 +9,7 @@ exports.config = {
     maxInstances: 10,
     
     capabilities: [{
-        browserName: 'chrome' // or "firefox", "microsoftedge", "safari"
+        browserName: 'chrome' 
     }],
    
     logLevel: 'info',
