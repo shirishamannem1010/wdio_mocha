@@ -9,7 +9,15 @@ exports.config = {
     maxInstances: 10,
     
     capabilities: [{
-        browserName: 'chrome' 
+        browserName: 'chrome' ,
+        'goog:chromeOptions': {
+            prefs: {
+                'download.default_directory': 'C:/Users/shirisha.mannem/OneDrive - Feuji Software Solutions Pvt Ltd/Documents/Projects/wdio/filedownloads',
+                'download.prompt_for_download': false,
+                'download.directory_upgrade': true,
+                'plugins.always_open_pdf_externally': true,
+            }
+        }
     }],
    
     logLevel: 'info',

@@ -5,7 +5,6 @@ require('dotenv').config();
 describe('Sauce Demo Login application', () => {
     it('should login with valid credentials', async () => {
         await LoginPage.open()
-        // await LoginPage.login('standard_user', 'secret_sauce')
         await LoginPage.login(process.env.user_name, process.env.password)
     })
     it('should buy a product', async()=>{
@@ -16,5 +15,8 @@ describe('Sauce Demo Login application', () => {
     it('sort product based on price', async()=>{
         await sortProduct.selectPriceLowToHigh();
         await sortProduct.comparePrices();
+    })
+    it('should logout the application', async()=>{
+        await LoginPage.logout();
     })
 })
